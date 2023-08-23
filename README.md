@@ -1,13 +1,19 @@
-# Sample Hardhat Project
+# Multi Wallet Hardhat Project
 
 This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
 
-Try running some of the following tasks:
+```sh
+$ npm i -j hardhat
+$ npm i --save-dev @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai @openzeppelin/contracts @nomiclabs/hardhat-etherscan @nomiclabs/hardhat-truffle5
+$ npm install --save-dev erc721a
+```
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
+## Usage
+
+```sh
+$ npx hardhat compile // Compile Code
+$ npx hardhat node // Start localhost test accounts
+$ npx hardhat test --localhost // Local Deployment & Testing
+$ npx hardhat test scripts/NFT-deploy.js --network rinkeby  // RinkeBy Testnet Deployment
+$ npx hardhat test scripts/NFT-deploy.js --network mainnet  // Main-net Deployment
 ```
